@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: phrasebook
+  datasource:
+    url: jdbc:postgresql://192.168.99.100:5432/phrasebook
+    username: postgres
+    password: lollion
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: validate
+  redis:
+    host: 192.168.99.100
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 7
+        max-idle: 7
+        min-idle: 2
+        max-wait: -1ms
+      shutdown-timeout: 200ms
+  cache:
+    redis:
+      cache-null-values: false
+      time-to-live: 600000
+      use-key-prefix: true
+    type: redis
+  kafka:
+    bootstrap-servers: 192.168.99.100:9092
+server:
+  port: 8085
+
+app:
+  topic:
+    mail: mail-topic
+  participant:
+    email: arhimedyura@gmail.com

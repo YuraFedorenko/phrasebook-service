@@ -1,0 +1,3 @@
+CREATE USER lollion;
+CREATE DATABASE lollion;
+GRANT ALL PRIVILEGES ON DATABASE lollion TO lollion;
