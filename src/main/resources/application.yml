@@ -28,6 +28,8 @@ spring:
     type: redis
   kafka:
     bootstrap-servers: 192.168.99.100:9092
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 server:
   port: 8085
 
