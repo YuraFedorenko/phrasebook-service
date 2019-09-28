@@ -36,3 +36,5 @@ app:
     mail: mail-topic
   participant:
     email: arhimedyura@gmail.com
+config:
+  phrase: love
